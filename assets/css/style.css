@@ -1,0 +1,102 @@
+.woocommerce-input-wrapper .eaw-custom-div {
+    display: flex;
+    align-items: center;
+}
+
+.woocommerce-input-wrapper .eaw-custom-div label {
+    margin-left: 15px;
+}
+
+.custom-fees-wrap .eaw-wrap-title {
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.eaw-tr-extra-field-item-heading input[type="text"]{
+    width: 400px;
+}
+.eaw-accordions {
+    display: block;
+    max-width: 800px;
+    margin: auto;
+}
+  
+  .eaw_accordion_item {
+    width: 100%;
+    height: auto;
+    margin: 5px 0;
+  
+    .eaw_title_tab {
+      width: 100%;
+      background-color: #046bd2;
+      color: #FCFCFC;
+      padding: 12px 30px;
+      cursor: pointer;
+      transition: background-color .3s ease-in;
+      border-radius:4px;
+      .title {
+        font-size: 24px;
+        letter-spacing: 1px;
+        position: relative;
+        color: #FCFCFC;
+        text-transform: capitalize;
+        .icon {
+          position: absolute;
+          right: 1%;
+          top: calc(50% - 8px);
+          width: 16px;
+          height: 16px;
+          background-color: transparent;
+          transform: rotate(-90deg);
+          transition: transform 0.3s ease-in;
+          &:before, &:after {
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 2px;
+            background-color: #FCFCFC;
+          }
+          &:before {
+            top: 0;
+            left: 2px;
+            transform: rotate(-45deg);
+          }
+          &:after {
+            top: 0;
+            right: 2px;
+            transform: rotate(45deg);
+          }
+        }
+      }
+    }
+  }
+  
+  .inner_content {
+    width: 100%;
+    height: auto;
+    display: none;
+    overflow: hidden;
+    p {
+      width: 98%;
+      margin: auto;
+      padding: 18px 15px;
+      font-size: 16px;
+      line-height: 28px;
+      letter-spacing: 1px;
+    }
+  }
+  
+  /* ================================= */
+  
+  .eaw_accordion_item {
+    .eaw_title_tab {
+      &.active {
+        .title .icon {
+          transform: rotate(0deg);
+          transition: transform .3s ease-in;
+        }
+      }
+    }
+  
+  }

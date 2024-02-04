@@ -1,0 +1,25 @@
+#eaw-repeatable-fieldset-one,#eaw-repeatable-fieldset-accessories {
+    width: 100%;
+}
+
+#eaw-repeatable-fieldset-one .eaw-input-td-field,
+#eaw-repeatable-fieldset-accessories .eaw-input-td-field {
+    width: 15%;
+}
+
+#eaw-repeatable-fieldset-one .eaw-input-td-field input[type="text"],
+#eaw-repeatable-fieldset-accessories .eaw-input-td-field input[type="text"]{
+    width: 100%;
+}
+
+.eaw-tr-extra-field-item {
+    display: block;
+    margin-top: 10px;
+}
+
+#eaw-repeatable-fieldset-one .eaw-tr-extra-field-item-heading .eaw-input-td-field input[type="text"],
+#eaw-repeatable-fieldset-accessories .eaw-tr-extra-field-item-heading .eaw-input-td-field input[type="text"] {
+    width: 28.5%;
+}
+
+ 
