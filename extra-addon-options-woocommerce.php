@@ -116,11 +116,20 @@ function eaw_extra_item_fees_before_add_to_cart()
         'type'    => 'radio',
         'class'   => array('form-row-wide'),
         'options' => $accitem,
-        'default' => ''
+        'default' => '',
     );
 
     $eaw_acc_title  = get_post_meta($post->ID, 'eaw_acc_title', true);
     $eaw_item_title = get_post_meta($post->ID, 'eaw_item_title', true);
+    $extra_item_fees_value  = '';
+    if (isset($_POST['extra_item_fees'])) {
+        $extra_item_fees_value = sanitize_text_field($_POST['extra_item_fees']);
+    }
+    $eaw_accessories_fees = '';
+    if (isset($_POST['eaw_accessories_fees'])) {
+        $eaw_accessories_fees = sanitize_text_field($_POST['eaw_accessories_fees']);
+    }
+
 ?>
     <?php if (
         isset($eaw_extra_item_group) && !empty($eaw_extra_item_group)
@@ -142,7 +151,7 @@ function eaw_extra_item_fees_before_add_to_cart()
                             </h3>
                         </div>
                         <div class="inner_content">
-                            <?php woocommerce_form_field('extra_item_fees', $args, ''); ?>
+                            <?php woocommerce_form_field('extra_item_fees', $args, $extra_item_fees_value); ?>
                         </div>
                     </div>
                 <?php } ?>
@@ -155,7 +164,7 @@ function eaw_extra_item_fees_before_add_to_cart()
                             </h3>
                         </div>
                         <div class="inner_content">
-                            <?php woocommerce_form_field('eaw_accessories_fees', $args_acc, ''); ?>
+                            <?php woocommerce_form_field('eaw_accessories_fees', $args_acc, $eaw_accessories_fees); ?>
                         </div>
                     </div>
                 <?php } ?>
@@ -335,5 +344,6 @@ function eaw_sanitize_input($input)
 {
     return strip_tags($input); // You can customize the sanitization method as needed
 }
+
 
 ?>
